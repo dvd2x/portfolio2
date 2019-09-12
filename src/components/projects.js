@@ -1,151 +1,107 @@
-import React, { Component } from "react";
-import {
-  Tabs,
-  Tab,
-  Grid,
-  Cell,
-  Card,
-  CardTitle,
-  CardActions,
-  Button,
-  CardMenu,
-  IconButton,
-  CardText
-} from "react-mdl";
+import React, { Component } from 'react';
+import { Tabs, Tab, Grid, Cell, Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton } from 'react-mdl';
+
 
 class Projects extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      activeTab: 0
-    };
+    this.state = { activeTab: 0 };
   }
 
   toggleCategories() {
-    if (this.state.activeTab === 0) {
-      return (
+
+    if(this.state.activeTab === 0){
+      return(
         <div className="projects-grid">
-          {/*Project 1*/}
-          <Card shadow={5} style={{ minWidth: "450", margin: "auto" }}>
-            <CardTitle
-              style={{
-                color: "#000",
-                height: "176px",
-                background:
-                  "url(https://miro.medium.com/max/2304/1*Tgn8ZHDoG_ySzUp5ZPxa2w.jpeg) center / cover"
-              }}
-            >
-              HTML/CSS Project #1
-            </CardTitle>
+          {/* Project 1 */}
+          <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
+            <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover'}} >React Project #1</CardTitle>
             <CardText>
-              Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-              consectetur, adipisci velit.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
             </CardText>
             <CardActions border>
-              <Button colored>Github</Button>
+              <Button colored>GitHub</Button>
               <Button colored>CodePen</Button>
-              <Button colored>LiveDemo</Button>
+              <Button colored>Live Demo</Button>
             </CardActions>
-            <CardMenu style={{ color: "#fff" }}>
+            <CardMenu style={{color: '#fff'}}>
               <IconButton name="share" />
             </CardMenu>
           </Card>
 
-          {/*Project 2*/}
-          <Card shadow={5} style={{ minWidth: "450", margin: "auto" }}>
-            <CardTitle
-              style={{
-                color: "#000",
-                height: "176px",
-                background:
-                  "url(https://miro.medium.com/max/2304/1*Tgn8ZHDoG_ySzUp5ZPxa2w.jpeg) center / cover"
-              }}
-            >
-              HTML/CSS Project #2
-            </CardTitle>
+          {/* Project 2 */}
+          <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
+            <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover'}} >React Project #2</CardTitle>
             <CardText>
-              Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-              consectetur, adipisci velit.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
             </CardText>
             <CardActions border>
-              <Button colored>Github</Button>
+              <Button colored>GitHub</Button>
               <Button colored>CodePen</Button>
-              <Button colored>LiveDemo</Button>
+              <Button colored>Live Demo</Button>
             </CardActions>
-            <CardMenu style={{ color: "#fff" }}>
+            <CardMenu style={{color: '#fff'}}>
               <IconButton name="share" />
             </CardMenu>
           </Card>
 
-          {/*Project 3*/}
-          <Card shadow={5} style={{ minWidth: "450", margin: "auto" }}>
-            <CardTitle
-              style={{
-                color: "#000",
-                height: "176px",
-                background:
-                  "url(https://miro.medium.com/max/2304/1*Tgn8ZHDoG_ySzUp5ZPxa2w.jpeg) center / cover"
-              }}
-            >
-              HTML/CSS Project #3
-            </CardTitle>
+          {/* Project 3 */}
+          <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
+            <CardTitle style={{color: '#fff', height: '176px', background: 'url(https://xtnotes-1255646395.coshk.myqcloud.com/images/react-1.svg) center / cover'}} >React Project #3</CardTitle>
             <CardText>
-              Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-              consectetur, adipisci velit.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
             </CardText>
             <CardActions border>
-              <Button colored>Github</Button>
+              <Button colored>GitHub</Button>
               <Button colored>CodePen</Button>
-              <Button colored>LiveDemo</Button>
+              <Button colored>Live Demo</Button>
             </CardActions>
-            <CardMenu style={{ color: "#fff" }}>
+            <CardMenu style={{color: '#fff'}}>
               <IconButton name="share" />
             </CardMenu>
           </Card>
         </div>
-      );
-    } else if (this.state.activeTab === 1) {
+
+
+      )
+    } else if(this.state.activeTab === 1) {
       return (
-        <div>
-          <h1>This is JavaScript</h1>
-        </div>
-      );
-    } else if (this.state.activeTab === 2) {
+        <div><h1>This is Angular</h1></div>
+      )
+    } else if(this.state.activeTab === 2) {
       return (
-        <div>
-          <h1>This is React</h1>
-        </div>
-      );
-    } else if (this.state.activeTab === 3) {
+        <div><h1>This is VueJS</h1></div>
+      )
+    } else if(this.state.activeTab === 3) {
       return (
-        <div>
-          <h1>This is API</h1>
-        </div>
-      );
+        <div><h1>This is MongoDB</h1></div>
+      )
     }
+
   }
+
+
+
   render() {
-    return (
-      <div className="category-tabs">
-        <h2>Recent Projects</h2>
-        <hr />
-        <Tabs
-          activeTab={this.state.activeTab}
-          onChange={tabId => this.setState({ activeTab: tabId })}
-          ripple
-        >
-          <Tab>HTML/CSS</Tab>
-          <Tab>JavaScript</Tab>
+    return(
+      <div>
+        <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId })} ripple>
           <Tab>React</Tab>
-          <Tab>API</Tab>
+          <Tab>Angular</Tab>
+          <Tab>VueJS</Tab>
+          <Tab>MongoDB</Tab>
         </Tabs>
-        <Grid>
-          <Cell col={12}>
-            <div className="content">{this.toggleCategories()}</div>
-          </Cell>
-        </Grid>
+
+
+          <Grid>
+            <Cell col={12}>
+              <div className="content">{this.toggleCategories()}</div>
+            </Cell>
+          </Grid>
+
+
       </div>
-    );
+    )
   }
 }
 
